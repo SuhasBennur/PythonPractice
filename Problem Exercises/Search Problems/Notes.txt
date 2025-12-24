@@ -1,0 +1,38 @@
+
+- Linear Search → simple, works on unsorted arrays.
+- Binary Search → efficient, requires sorted arrays.
+- Jump Search → skips blocks, then linear search.
+- Interpolation Search → estimates position, good for uniformly distributed data.
+- Exponential Search → finds range quickly, then binary search.
+- Ternary Search → splits into three parts, less common but interesting.
+
+Searching Algorithms (time complexity in words)
+- Linear Search: 
+Best case is constant time O(1) if the element is at the beginning. 
+Worst case is O(n) if the element is at the end or not present. 
+Average case is also O(n).
+
+- Binary Search: 
+Best case is O(1) if the middle element is the target. 
+Worst and average case are O(log n). 
+Requires a sorted array.
+
+- Jump Search: 
+Best case is O(1). 
+Average and worst case are about O(sqrt{n}). 
+Works on sorted arrays.
+
+- Interpolation Search: 
+Best case is O(1). 
+Average case is O(log log n) for uniformly distributed data. 
+Worst case can degrade to O(n).
+
+- Exponential Search: 
+Best case is O(1). 
+Average and worst case are O(log n). 
+Useful for unbounded or infinite lists.
+
+- Ternary Search: 
+Best case is O(1). 
+Average and worst case are O(log n). 
+Splits the array into three parts instead of two.

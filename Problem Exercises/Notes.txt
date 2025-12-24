@@ -1,0 +1,41 @@
+Quadratic sorts (Bubble, Selection, Insertion) are fine for small datasets but inefficient for large ones.
+Divide-and-conquer sorts (Merge, Quick, Heap) are much faster for large datasets.
+Specialized sorts (Counting, Radix, Bucket) can beat O(nlog n) but only under certain conditions (like integers in a limited range).
+
+Sorting Algorithms (time complexity in words)
+- Bubble Sort: 
+Best case is O(n) if the array is already sorted. 
+Average and worst case are O(n^2).
+
+- Selection Sort: 
+Best, average, and worst cases are all O(n^2). 
+Always quadratic.
+
+- Insertion Sort: 
+Best case is O(n) if the array is nearly sorted. 
+Average and worst case are O(n^2).
+
+- Merge Sort: 
+Best, average, and worst cases are all O(n\log n). 
+Requires extra space O(n).
+
+- Quick Sort: 
+Best and average cases are O(nlog n). 
+Worst case is O(n^2) if the pivot choice is poor. 
+Space complexity is O(log n).
+
+- Heap Sort: 
+Best, average, and worst cases are all O(nlog n). 
+In-place but not stable.
+
+- Counting Sort: 
+Best, average, and worst cases are O(n+k), where k is the range of input values. 
+Works only for integers in a fixed range.
+
+- Radix Sort: 
+Best, average, and worst cases are O(nk), where k is the number of digits. 
+Efficient for integers or strings.
+
+- Bucket Sort: 
+Best and average cases are O(n+k).
+ Worst case can degrade to O(n^2) depending on distribution.
