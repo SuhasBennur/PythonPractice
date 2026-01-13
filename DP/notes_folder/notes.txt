@@ -1,0 +1,400 @@
+######################################################################
+  ___  ___ ___ ___ ___ _  _   ___  _ _____ _____ ___ ___ _  _ ___ 
+ |   \| __/ __|_ _/ __| \| | | _ \/_\_   _|_   _| __| _ \ \| / __|
+ | |) | _|\__ \| | (_ | .` | |  _/ _ \| |   | | | _||   / .` \__ \
+ |___/|___|___/___\___|_|\_| |_|/_/ \_\_|   |_| |___|_|_\_|\_|___/
+                                                                  
+######################################################################
+
+Design Patterns - total of 4.5 hrs 
+
+1. Introduction 
+2. Creational Patterns 
+
+    - Singleton 
+    - Factory Method 
+    - Abstract Factory 
+    - Builder 
+    - Prototype 
+
+3. Structural Design Patterns 
+
+    - Adapter 
+    - Bridge 
+    - Composite 
+    - Decorator 
+    - Facade 
+    - Flyweight 
+    - Proxy 
+
+4. Behavioural Design patterns 
+
+    - Chain of Responsibility 
+    - Command 
+    - Interpreter 
+    - Iterator 
+    - Mediator 
+    - Memento 
+    - Observer 
+    - State 
+    - Strategy 
+    - Template Method 
+    - Visitor 
+
+#+++++++++++++++++++++#
+#  Singleton Pattern! |
+#+++++++++++++++++++++#
+
+The Singleton design pattern is a creational design pattern that ensures a class 
+has only one instance and provides a global point of access to that instance. 
+In other words, it restricts the instantiation of a class to a single instance 
+and provides a way to access that instance from any part of the code.
+
+- Breaks single Responsibility 
+- Testability issues 
+- State for life
+
+#+++++++++++++++++++++#
+#  Factory Pattern!   |
+#+++++++++++++++++++++#
+
+"The Factory Method is a design pattern that defines an interface for creating 
+objects in a super class, but allows subclasses to decide which class to instantiate."
+
+In other words, the Factory Method pattern provides a way to create objects by 
+delegating the responsibility of instantiation to subclasses. This promotes flexibility 
+and allows different subclasses to create different types of objects while adhering to 
+a common interface
+
+#++++++++++++++++++++++++++++++#
+#  Abstract Factory Pattern!   |
+#++++++++++++++++++++++++++++++#
+
+The Abstract Factory pattern is a design pattern that provides an interface for creating
+families of related or dependent objects without specifying their concrete classes. It 
+allows you to create objects that are related by a common theme or concept, such as creating 
+different types of products in a system.
+
+
+#+++++++++++++++++++++#
+#  Builder Pattern!   |
+#+++++++++++++++++++++#
+
+"The Builder Pattern is a design pattern that separates the construction of a 
+complex object from its representation, allowing the same construction process to 
+create different representations."
+
+In other words, the Builder Pattern provides a way to construct complex objects 
+step by step, enabling you to create different variations of the object by using 
+the same construction process. It promotes flexibility, reusability, and separation 
+of concerns in object creation.
+
+#+++++++++++++++++++++#
+#  Prototype Pattern! |
+#+++++++++++++++++++++#
+
+The Prototype Pattern is a creational design pattern that allows you to create 
+new objects by copying an existing instance, known as the prototype. It helps in 
+creating new objects with the same state as an existing object, avoiding the need 
+to explicitly define and initialize every attribute and property.
+
+An analogy for the Prototype Pattern is a photocopying machine. Imagine you have an 
+original document, and you want to create multiple copies of it. Instead of rewriting 
+the entire content for each copy, you can use a photocopying machine to duplicate the 
+original. Similarly, the Prototype Pattern allows you to create new objects by cloning 
+an existing object, which serves as the prototype.
+
+#+++++++++++++++++++++#
+#  Adapter Pattern!   |
+#+++++++++++++++++++++#
+
+The Adapter Pattern is a structural design pattern that allows objects with incompatible 
+interfaces to work together. It acts as a bridge between two incompatible interfaces, 
+making them compatible and enabling them to collaborate without changing their existing 
+code.
+
+An analogy for the Adapter Pattern is a power adapter. Consider that you have a device 
+with a plug designed for one type of electrical outlet, but you're in a region with a 
+different type of outlet. You use a power adapter to bridge the gap and connect your 
+device to the foreign outlet. Similarly, the Adapter Pattern allows objects with different 
+interfaces to communicate and interact seamlessly.
+
+#+++++++++++++++++++++#
+#  Bridge Pattern!    |
+#+++++++++++++++++++++#
+
+Certainly! The Bridge Pattern is a structural design pattern that separates abstraction 
+from implementation. It allows you to create a bridge between two orthogonal (independent) 
+abstractions, enabling them to vary independently. This pattern is especially useful when 
+you have multiple dimensions of variability that need to be managed independently.
+
+An analogy for the Bridge Pattern is a TV remote control. The remote control acts as a 
+bridge between the user and the TV. Regardless of the TV's brand or model, the user can 
+change channels, adjust the volume, and perform other actions using the remote control.
+The bridge pattern similarly allows you to decouple abstractions (e.g., user actions) 
+from their implementations (e.g., TV models).
+
+#+++++++++++++++++++++#
+# Composite Pattern!  |
+#+++++++++++++++++++++#
+
+The Composite Design Pattern is a structural design pattern that lets you compose objects 
+into tree structures to represent part-whole hierarchies. It allows clients to treat 
+individual objects and compositions of objects uniformly.
+
+An analogy for the Composite Pattern is a computer file system. In a file system, a 
+directory can contain files and subdirectories, which can, in turn, contain more files and 
+subdirectories. You can perform operations like copying, moving, or deleting on both 
+individual files and entire directories. The Composite Pattern similarly allows you 
+to treat individual objects and compositions (combinations) of objects uniformly.
+
+Here's how the Composite Pattern works:
+
+Component: 
+
+    This is the base interface or abstract class that declares common operations 
+    for both leaf and composite objects. It defines methods that can be used uniformly 
+    across all objects in the hierarchy.
+
+Leaf: 
+    
+    These are the individual objects that don't have any children. They implement the 
+    methods declared in the component interface. In a file system example, 
+    files are leaf objects.
+
+Composite: 
+    
+    These are objects that can have children, which can be either leaves or other 
+    composites. Composites implement the component interface as well as methods for 
+    adding, removing, and accessing children.
+
+Its more like a company where all people are employees but you have manager, vp and senior vp 
+etc 
+
+#+++++++++++++++++++++#
+# Decorator Pattern!  |
+#+++++++++++++++++++++#
+
+Certainly! The Decorator Pattern is a structural design pattern that allows you to add 
+new behaviors or responsibilities to objects without altering their existing code. It is 
+often used to extend the functionalities of classes in a flexible and reusable way.
+
+An analogy for the Decorator Pattern is decorating a room. Imagine you have a plain 
+room, and you want to add decorations like paintings, curtains, and furniture. You can 
+add or remove these decorations without changing the structure of the room itself. Similarly, 
+the Decorator Pattern allows you to add new features or responsibilities to objects without 
+modifying their core functionality.
+
+Here's how the Decorator Pattern works:
+
+Component: 
+
+    This is the base interface or abstract class that defines the common methods 
+    for all concrete components.
+
+Concrete Component: 
+
+    This is the base class that implements the component interface. It represents the 
+    core object to which you want to add functionalities.
+
+Decorator: 
+
+    This is the abstract class that also implements the component interface. It has 
+    a reference to a component and can dynamically add or override its behaviors.
+
+Concrete Decorator: 
+    
+    These are the concrete classes that extend the decorator. They add specific 
+    behaviors or responsibilities to the component.
+
+#+++++++++++++++++++++#
+#  Facade Pattern!    |
+#+++++++++++++++++++++#
+
+Certainly! The Facade Design Pattern is a structural design pattern that provides a simplified 
+and unified interface to a set of interfaces in a subsystem. It simplifies complex systems 
+by providing a higher-level interface that clients can use to interact with the system, rather 
+than having clients interact directly with multiple subsystem components. This pattern is 
+often used to hide the complexities and intricacies of a system and provide a more 
+user-friendly interface.
+
+Analogy: 
+
+    Think of a facade as the user interface of a modern smartphone. A smartphone is a 
+complex device with numerous hardware and software components such as processors, memory, 
+sensors, and various apps. However, users interact with the phone primarily through a 
+simplified, user-friendly interface – the touchscreen, icons, and menus. This interface 
+shields users from the underlying complexity of the device and its software.
+
+
+Here's how the Facade Pattern works:
+
+Facade: 
+
+    This is a class that provides a simplified interface to a more complex subsystem 
+or set of classes. It encapsulates the details of how the subsystem works.
+
+Subsystems: 
+    
+    These are the individual classes or components that make up the complex system. 
+Clients typically interact with these subsystem classes through the facade
+
+#++++++++++++++++++++++++++++#
+#  Flyweight Design Pattern! |
+#++++++++++++++++++++++++++++#
+
+The Flyweight Design Pattern is a structural design pattern that is used to minimize 
+memory or computational costs associated with creating and managing a large number of 
+objects with similar properties. It does this by sharing as much as possible between 
+these objects, thereby reducing memory usage and improving performance.
+
+#++++++++++++++++++++++++#
+#  Proxy Design Pattern! |
+#++++++++++++++++++++++++#
+
+Proxy pattern provides a substitute for another object and controls 
+access to that object, allowing you to perform something before 
+or after the request reaches the original object 
+
+#++++++++++++++++++++++++++++++++++++++++++#
+#  Chain of Responsibility Design Pattern! |
+#++++++++++++++++++++++++++++++++++++++++++#
+
+The Chain of Responsibility Design Pattern is a behavioral design pattern that allows an 
+object to pass a request along a chain of handlers. Each handler in the chain decides either 
+to process the request or to pass it to the next handler in the chain. This pattern decouples 
+senders and receivers of requests and allows multiple objects to handle a request without the 
+sender needing to know which object will ultimately process it
+
+#++++++++++++++++++++++++++#
+#  Command Design Pattern! |
+#++++++++++++++++++++++++++#
+
+The Command Design Pattern helps in decoupling object requests from client. 
+The command Design pattern implements a command class which actually handles all requests. 
+If requests are directly sent to invoke their respective function there is a tight coupling 
+by which too many requests would be sent to back end. To handle this we have a command option 
+where it handles the requests by a queue which is then processed one by one by the back end code 
+
+Advantages of Command Design Pattern 
+
+- A Request is wrapped in an object that contains all request info 
+- The command Object is passed to the correct handler 
+- Decoupling 
+- Efficiency, Ordering, Priority etc 
+
+#++++++++++++++++++++++++++++++#
+#  Interpreter Design Pattern! |
+#++++++++++++++++++++++++++++++#
+
+Interpreter Design Pattern deals with processing expressions which are terminal and non terminal. 
+Meaning, it deals with a complex calculation in a certain recursive sequence by which it evaluates 
+heavy loads. In this approach it is identified that terminal expressions are the operators and the 
+non-terminal expressions are the operands 
+
+Concepts of Interpreter Pattern 
+
+- Recursively evaluate grammar expressions 
+- Parsing, Processing Engines etc 
+- Important Components are  
+    - Terminal Expression 
+    - Non-Terminal Expression 
+
+#+++++++++++++++++++++++++++#
+#  Iterator Design Pattern! |
+#+++++++++++++++++++++++++++#
+
+Iterator Traverses through a collection. Meaning its a glorified loop which works 
+on classes and functions. Iterator consists of classes which reverses and sorts an elements. 
+The Idea of an iterator pattern is to traverse, meaning loop through individual elements in a 
+sequential way. The reason this pattern is chosen instead of a traditional loop is this pattern 
+stays unrelated to any collections elements. So basically a binary tree is implemented by 
+which speed in traverse is achieved.
+
+The Iterator Design Pattern is a behavioral design pattern that provides a way to access 
+elements of an aggregate object sequentially without exposing its underlying representation. 
+It defines a separate object, called an iterator, which encapsulates the traversal of the 
+elements of the aggregate.
+
+#+++++++++++++++++++++++++++#
+#  Mediator Design Pattern! |
+#+++++++++++++++++++++++++++#
+
+This pattern is some what similar to command pattern. however there is no queue involved 
+
+- Provide a central object used for communicating between objects 
+- Objects don't talk to each other 
+- Reduce Dependency between Object 
+
+#+++++++++++++++++++++++++++#
+#  Observer Design Pattern! |
+#+++++++++++++++++++++++++++#
+
+The Observer Design Pattern is a behavioral design pattern where an object, known as the subject, maintains a list of 
+dependents, known as observers, that are notified of any changes in the subject's state. This pattern is commonly 
+used to implement distributed event handling systems.
+
+Key Participants:
+
+Subject: Maintains a list of observers and provides methods to attach, detach, and notify observers of state changes.
+Observer: Defines an interface for receiving updates from the subject.
+ConcreteSubject: Implements the Subject interface and maintains the state that observers are interested in. 
+It notifies observers of changes in its state.
+ConcreteObserver: Implements the Observer interface and registers with the subject to receive updates.
+
+- Define a subscription mechanism 
+- Notify multiple objects simultaneously 
+- One to Many Relationships 
+
+#+++++++++++++++++++++++++++#
+#  State Design Pattern!    |
+#+++++++++++++++++++++++++++#
+
+The State Design Pattern is a behavioral design pattern that allows an object to alter 
+its behavior when its internal state changes. The pattern represents states as separate 
+classes and delegates the state-specific behavior to these classes. This makes it easy to
+add new states and transitions between states without modifying the context (the object whose behavior varies with
+its internal state).
+
+#+++++++++++++++++++++++++++#
+#  Strategy Design Pattern! |
+#+++++++++++++++++++++++++++#
+
+ The Strategy Design Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each algorithm, 
+ and makes them interchangeable. It lets the client code vary its behavior without changing its structure. The pattern 
+ defines a set of algorithms, encapsulates each one, and makes them interchangeable.
+
+#+++++++++++++++++++++++++#
+# Visitor Design Pattern! |
+#+++++++++++++++++++++++++#
+
+The Visitor Design Pattern is a behavioral design pattern that allows you to define a new operation without 
+changing the classes of the elements on which it operates. It is often used when you have a set of related classes that 
+represent a hierarchy of objects, and you want to perform operations on these objects that are not part of their common interface.
+
+Key Participants:
+
+Visitor: 
+
+    Defines a Visit operation for each class of ConcreteElement in the object structure. 
+    The Visit operation signature typically includes the type of ConcreteElement being visited.
+
+ConcreteVisitor: 
+    
+    Implements the Visit operation for each class of ConcreteElement. 
+    This class is responsible for the actual processing or manipulation of the elements.
+
+Element: 
+
+    Declares an Accept operation that accepts a visitor. 
+    This operation is the entry point for the visitor to access the element.
+
+ConcreteElement: 
+
+    Implements the Accept operation. This operation typically calls the 
+    Visit method on the visitor, passing itself as an argument.
+
+ObjectStructure: 
+
+    Represents a collection or structure of elements that need to be visited. 
+    It provides an interface to allow visitors to visit its elements.
